@@ -1,0 +1,13 @@
+Frente
+Frente Direita
+Frente Esquerda
+Lateral Direita
+Lateral Esquerda
+Painel
+Parabrisas Frontal
+Selo
+Traseira
+Traseira Direita
+Traseira Esquerda
+VIN
+outro

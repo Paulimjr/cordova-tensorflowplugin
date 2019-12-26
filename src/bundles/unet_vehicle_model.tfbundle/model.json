@@ -1,0 +1,40 @@
+{
+  "name": "unet_vehicle_model",
+  "details": "Unet Vehicle Model",
+  "version": "1",
+  "id": "unet_vehicle_model",
+  "author": "Fidelidade",
+  "license": "MIT",
+  "model": {
+    "file": "unet_vehicle_model.tflite",
+    "quantized": false,
+    "backend": "tflite",
+    "modes": [
+      "predict"
+    ]
+  },
+  "inputs": [
+    {
+      "name": "input",
+      "type": "image",
+      "shape": [
+        224,
+        224,
+        3
+      ],
+      "format": "RGB"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "type": "image",
+      "shape": [
+        224,
+        224,
+        3
+      ],
+      "format": "RGB"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="tensorflow-fidelidade-plugin" version="1.0.0">
+    <name>TensorFlowFidelidadePlugin</name>
+    <description>Tensor Flow Plugin to identify an image using Image Identification</description>
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines> 
+ 
+    <js-module src="www/TensorFlowFidelidadePlugin.js" name="TensorFlowFidelidadePlugin">
+        <clobbers target="cordova.plugins.TensorFlowFidelidadePlugin" />
+    </js-module>
+    
+    <!-- ios -->
+    <dependency url="https://github.com/andregrillo/cordova-plugin-cocoapods-support.git"/>
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="TensorFlowFidelidadePlugin">
+                <param name="ios-package" value="TensorFlowFidelidadePlugin"/>
+            </feature>
+        </config-file>
+
+        <!-- Sets minimum ios version and enable use_frameworks! -->
+        <pods-config ios-min-version="9.3" use-frameworks="true">
+        </pods-config>
+
+        <!-- Install Tensor IO for TensorFlow Lite -->
+        <pod name="TensorIO/TFLite" />
+
+        <!-- iOS Plugin -->
+        <source-file src="./src/ios/TensorFlowFidelidadePlugin.mm" />
+         
+        <!-- Resources iOS -->
+        <resource-file src="./src/bundles/enq_model.tfbundle"/>
+        <resource-file src="./src/bundles/quality_model.tfbundle"/>
+        <resource-file src="./src/bundles/unet_vehicle_model.tfbundle"/>
+
+    </platform>
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="TensorFlowFidelidadePlugin">
+                <param name="android-package" value="com.tensorflow.fidelidade.plugin.TensorFlowFidelidadePlugin"/>
+            </feature>
+        </config-file>
+ 
+        <source-file src="src/android/TensorFlowFidelidadePlugin.java" target-dir="src/com/tensorflow/fidelidade/plugin" />
+		<framework src="src/android/lib/tensorflow.gradle" custom="true" type="gradleReference" />  
+    
+    </platform>          
+</plugin>

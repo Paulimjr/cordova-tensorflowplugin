@@ -1,0 +1,30 @@
+{
+  "name": "enq_model",
+  "details": "Enquadramento",
+  "id": "enq_model",
+  "version": "1",
+  "author": "Fidelidade",
+  "license": "MIT",
+  "model": {
+    "file": "enq_model.tflite",
+    "quantized": false,
+    "backend": "tflite",
+    "modes": ["predict"]
+  },
+  "inputs": [
+    {
+      "name": "input",
+      "type": "image",
+      "shape": [64,64,3],
+      "format": "RGB"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "type": "array",
+      "shape": [1,13],
+      "labels": "labels.txt"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+repositories {
+	maven { url 'http://maven.microblink.com' }
+}
+
+dependencies {
+    implementation 'com.github.doc-ai:tensorio-android:master'
+    implementation 'org.tensorflow:tensorflow-lite:+'
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+android {
+    aaptOptions {
+        noCompress "tflite"
+    }
+}

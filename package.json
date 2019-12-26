@@ -1,0 +1,24 @@
+{
+  "name": "tensorflow-fidelidade-plugin",
+  "version": "1.0.0",
+  "description": "Tensor Flow Plugin to identify an image using Image Identification",
+  "cordova": {
+    "id": "tensorflow-fidelidade-plugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+  },
+  "keywords": [
+    "cordova",
+    "tenslorflow lite",
+    "tensorflow",
+    "manipulate",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Paulo Cesar Camilo",
+  "license": "MIT"
+}

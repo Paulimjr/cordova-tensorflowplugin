@@ -1,0 +1,29 @@
+{
+  "name": "quality_model",
+  "details": "Qualidade",
+  "id": "quality_model",
+  "version": "1",
+  "author": "Fidelidade",
+  "license": "MIT",
+  "model": {
+    "file": "quality_model.tflite",
+    "quantized": false,
+    "backend": "tflite",
+    "modes": ["predict"]
+  },
+  "inputs": [
+    {
+      "name": "input",
+      "type": "image",
+      "shape": [224,224,3],
+      "format": "RGB"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "type": "array",
+      "shape": [1,2],
+    }
+  ]
+}
