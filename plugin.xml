@@ -16,7 +16,7 @@
     <!-- ios -->
     
     <!--<dependency id="cordova-plugin-cocoapods-support" url="https://github.com/andregrillo/cordova-plugin-cocoapods-support.git"/>-->
-    <dependency id="cordova-plugin-cocoapods-supportx" url="https://github.com/dpa99c/cordova-plugin-cocoapods-support.git"/>
+    <dependency id="cordova-plugin-cocoapod-supportx" url="https://github.com/dpa99c/cordova-plugin-cocoapods-support.git"/>
     
     <platform name="ios">
 
